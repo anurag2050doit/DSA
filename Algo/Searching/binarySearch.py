@@ -9,20 +9,35 @@ GFG: https://www.geeksforgeeks.org/binary-search/
 """
 
 
-def binary_search(array, lower, high, element):
-    if high >= lower:
+def binary_search_iterative(array, element):
+    low = 0
+    high = len(array) - 1
+    while high >= low:
+        mid = (high + low) // 2
+        if array[mid] == element:
+            return mid + 1
+        elif element > array[mid]:
+            low = mid + 1
+        else:
+            high = mid - 1
 
-        mid = int(lower + (high - lower) / 2)
+    return -1
+
+
+def binary_search_recursive(array, low, high, element):
+    if high >= low:
+
+        mid = (low + high) // 2
 
         if array[mid] == element:
-            return mid
+            return mid + 1
 
         if element > array[mid]:
-            lower = mid
-            return binary_search(array, lower + 1, high, element)
+            low = mid
+            return binary_search_recursive(array, low + 1, high, element)
         else:
             high = mid
-            return binary_search(array, lower, high - 1, element)
+            return binary_search_recursive(array, low, high - 1, element)
 
     else:
         return -1
@@ -32,7 +47,15 @@ if __name__ == '__main__':
     arr = [2, 3, 4, 10, 40]
     x = 10
     # Function call
-    result = binary_search(arr, 0, len(arr) - 1, x)
+    result = binary_search_recursive(arr, 0, len(arr) - 1, x)
+
+    if result != -1:
+        print("Element is present at index % d" % result)
+    else:
+        print("Element is not present in array")
+
+    x = 3
+    result = binary_search_iterative(arr, x)
 
     if result != -1:
         print("Element is present at index % d" % result)
