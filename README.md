@@ -1,5 +1,8 @@
 ## Data Structures and Algorithms
 
-- `Python` implementations of all problems 
-- Covering Basic of different DS and algorithm problem
-- Easy explanation of most common problem
+- `Python` implementations of all problems.
+- Covering Basic of different DS and algorithm problem.
+- Easy explanation of most common problem.
+- Each problem has link to various algorithmic problem website like: Geeks for Geeks, HackerEarth, HackerRank and 
+various others.
+- Well explain for each statement.

@@ -11,7 +11,7 @@ GFG: https://www.geeksforgeeks.org/minimum-number-platforms-required-railwaybus-
 """
 
 
-def findPlatform(arrival, departed, n):
+def find_platform(arrival, departed, n):
     arrival_array = sorted(arrival)
     departed_array = sorted(departed)
     i = 1
@@ -39,4 +39,4 @@ dep = [910, 1200, 1120, 1130, 1900, 2000]
 arrival_len = len(arr)
 
 print("Minimum Number of Platforms Required = ",
-      findPlatform(arr, dep, arrival_len))
+      find_platform(arr, dep, arrival_len))
