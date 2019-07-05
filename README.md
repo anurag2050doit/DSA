@@ -5,4 +5,4 @@
 - Easy explanation of most common problem.
 - Each problem has link to various algorithmic problem website like: Geeks for Geeks, HackerEarth, HackerRank and 
 various others.
-- Well explain for each statement.
+- Well explanation for each statement.

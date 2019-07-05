@@ -34,9 +34,10 @@ def find_platform(arrival, departed, n):
     return result
 
 
-arr = [900, 940, 950, 1100, 1500, 1800]
-dep = [910, 1200, 1120, 1130, 1900, 2000]
-arrival_len = len(arr)
+if __name__ == '__main__':
+    arr = [900, 940, 950, 1100, 1500, 1800]
+    dep = [910, 1200, 1120, 1130, 1900, 2000]
+    arrival_len = len(arr)
 
-print("Minimum Number of Platforms Required = ",
-      find_platform(arr, dep, arrival_len))
+    print("Minimum Number of Platforms Required = ",
+          find_platform(arr, dep, arrival_len))

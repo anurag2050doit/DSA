@@ -9,7 +9,7 @@ HackerRank: https://www.hackerrank.com/challenges/minimum-swaps-2/problem
 
 def min_swap(array):
     swap = 0
-    unsorted_arr_map = {p: v for (v, p) in enumerate(array, start=0)}
+    unsorted_arr_map = {value: position for (position, value) in enumerate(array, start=0)}
     sorted_arr = sorted(array)
 
     for correct_pos, element in enumerate(sorted_arr, start=0):
