@@ -68,9 +68,9 @@ class CircularLinkList:
     def remove_first(self):
         if self.is_empty():
             raise Empty('Linked List Empty')
-        oldhead = self._tail._next
-        self._tail._next = oldhead._next
-        self._head = oldhead._next
+        oldhead = self._tail.next
+        self._tail.next = oldhead.next
+        self._head = oldhead.next
         self._size -= 1
         if self.is_empty():
             self._tail = None
@@ -82,12 +82,12 @@ class CircularLinkList:
         thead = self._head
         i = 0
         while i < self._size - 2:
-            thead = thead._next
+            thead = thead.next
             i += 1
 
-        remove = thead._next
+        remove = thead.next
         self._tail = thead
-        self._tail._next = self._head
+        self._tail.next = self._head
         value = remove._element
         self._size -= 1
         return value
@@ -98,11 +98,11 @@ class CircularLinkList:
         thead = self._head
         i = 0
         while i < pos:
-            thead = thead._next
+            thead = thead.next
             i += 1
 
-        remove = thead._next
-        thead._next = remove._next
+        remove = thead.next
+        thead.next = remove.next
         self._size -= 1
 
     def display(self):
@@ -111,7 +111,7 @@ class CircularLinkList:
         while i < self._size:
             i += 1
             print(thead._element, end='-->')
-            thead = thead._next
+            thead = thead.next
         print()
 
 

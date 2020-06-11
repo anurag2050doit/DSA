@@ -46,7 +46,7 @@ class LinkedQueue:
         if self.is_empty():
             raise Empty('Queue is empty')
         value = self._head._element
-        self._head = self._head._next
+        self._head = self._head.next
         self._size -= 1
         if self.is_empty():
             self._tail = None
@@ -61,7 +61,7 @@ class LinkedQueue:
         temp = self._head
         while temp:
             print(temp._element, end='-->')
-            temp = temp._next
+            temp = temp.next
         print()
 
 

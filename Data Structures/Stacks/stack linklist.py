@@ -41,7 +41,7 @@ class LinkedStack:
         if self.is_empty():
             raise Empty('Stack is Empty')
         value = self._head._element
-        self._head = self._head._next
+        self._head = self._head.next
         self._size -= 1
         return value
 
@@ -54,7 +54,7 @@ class LinkedStack:
         temp = self._head
         while temp:
             print(temp._element, end='-->')
-            temp = temp._next
+            temp = temp.next
         print()
 
 

@@ -61,7 +61,7 @@ class DoublyLinkedList:
         while i < pos:
             thead = thead._next
             i += 1
-        thead._next._prev = newest
+        thead._next.prev = newest
         newest._next = thead._next
         thead._next = newest
         newest._prev = thead
@@ -82,12 +82,12 @@ class DoublyLinkedList:
         thead = self.head
         i = 0
         while i < self._size - 2:
-            thead = thead._next
+            thead = thead.next
             i += 1
         self._tail = thead
-        thead = thead._next
+        thead = thead.next
         value = thead._element
-        self._tail._next = None
+        self._tail.next = None
         self._size -= 1
         return value
 
@@ -101,8 +101,8 @@ class DoublyLinkedList:
             i += 1
 
         remove_node = thead._next
-        thead._next = remove_node._next
-        remove_node._next._prev = thead
+        thead._next = remove_node.next
+        remove_node.next.prev = thead
         self._size -= 1
         return remove_node._element
 
